@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<script>
+			for(var i = 0; i <=100; i++) {
+				if(i % 3 === 0) {console.log("Fizz: ", i)} 
+				else if(i % 5 ===0) {console.log("Buzz: ", i)}
+				if(i % 3 === 0 && i % 5 === 0) {console.log("Fizz Buzz! ", i)}					
+			}
+
+var rows = 8;
+var strip = "";
+for(var i = 0; i < rows; i++) {
+  if(i % 2 === 0) {
+    for(var j = 0; j < rows; j++) {
+        if(j % 2 === 0) {
+          strip = strip + " ";  
+        } else {
+	  strip = strip + "#";
+        }
+    } 
+  } else {
+  for(var t = 0; t < rows; t++) {
+        if(t % 2 === 0) {
+          strip = strip + "#";  
+        } else {
+	  strip = strip + " ";
+        }
+    } 
+  } 
+  console.log(strip);
+  strip = "";
+
+  function range(first, last) {
+  if (last < first) {
+    return undefined;
+  }
+
+  var range = [];
+  for(var i = first; i <= last; i++) {
+    range.push(i);
+  }
+
+  return range;
+}
+
+var suma = 0;
+function sumRange(range) {
+  if(range.length === 0) {
+    return suma;
+  } else {
+    suma += range.pop();
+    sumRange(range);
+  }
+}
+
+console.log(range(1,10));
+var tab = range(1, 10);
+
+console.log(sumRange(tab));
+console.log(suma);
+}	
+		</script>
+	</head>
+
+	<body>
+		<p>Demonstracja skryptu.
+	</body>
+<script src="min.js"></script>
+<script src="isEven.js"></script>
+<script src="countChar.js"></script>
+</html>
